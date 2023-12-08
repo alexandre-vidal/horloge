@@ -6,13 +6,13 @@ from time import strftime
 root = Tk()
 root.title("Horloge")
 
-def time():
+def afficher_heure():
     string = strftime('%D | %H:%M:%S')
     label.config(text=string)
-    label.after(1000, time)
+    label.after(1000, afficher_heure)
 
 label = Label(root, font=("Arial", 80), background = "black", foreground = "white")
 label.pack(anchor='center')
-time()
+afficher_heure()
 
 mainloop()
